@@ -1,0 +1,171 @@
+.add-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 60vh;
+    margin-bottom: 5%;
+}
+.form-abs {
+    width: 30%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacer-6);
+    
+}
+.form-abs > h1 {
+color: #1c4c9b;
+}
+.add-container > h1 {
+    text-align: center;
+    color: white;
+    font-family: 'Montserrat',sans-serif;
+}
+.add-container > h2 {
+    color: white;
+    font-family: 'Montserrat',sans-serif;
+    grid-column: 1/3;
+    margin-bottom: 2%;
+}
+.add-container > form {
+    width: 100%;
+    margin: 0;padding: 0;
+    display: grid;
+    grid-template-columns: repeat(2, 3fr);
+    grid-gap: var(--spacer-6);
+}
+
+#mail-1 {
+    grid-column: 1/3;
+}
+
+#create {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+form h2{
+    color: white;
+}
+
+.form-names,.form-address, .form-infos-composante,.form-address2,.form-names2,.form-infos-composante2{
+    display: flex;
+    gap: var(--spacer-3);
+
+}
+.form-livraison{
+    display: flex;
+    gap: var(--spacer-3);
+    margin-left: 23.5%;
+}
+
+
+.form-mission{
+    display: flex;
+    gap: var(--spacer-3);
+    margin-left: 23.5%;
+}
+
+.form-num-voie, .form-type-voie{
+    flex: 2;
+}
+
+.form-nom-voie{
+    flex: 6;
+}
+
+.form-cp{
+    flex: 2;
+}
+
+.form-ville{
+    flex: 8;
+}
+
+/* Media query pour les écrans de taille moyenne (iPhone 12/13 en mode portrait) */
+@media screen and (max-width: 430px) {
+    .container {
+        width: 100%;
+    }
+    h1 {
+        margin: 20% 0;
+    }
+
+    h2 {
+        width: 175%;
+        float: left;
+    }
+
+    form>h2 {
+        text-align: center;
+    }
+
+    form {
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+    }
+
+    input, textarea {
+        width: 20rem;
+    }
+
+    .buttons {
+        display: grid;
+        grid-template-columns: repeat(2, 2fr);
+        grid-gap: var(--spacer-2);
+        justify-content: center;
+        margin: 20% 0;
+    }
+    .form-names{
+        width: 100%;
+        display: flex;
+        gap: var(--spacer-3);
+        margin-left: -200%;
+    
+    }
+
+    .form-names2{
+        width: 100%;
+        display: flex;
+        gap: var(--spacer-3);
+        margin-left: -100%;
+    
+    }
+
+    .form-infos-composante{
+        width: 100%;
+        display: flex;
+        gap: var(--spacer-3);
+        margin-left: -100%;
+    }
+
+    .form-infos-composante2{
+        width: 100%;
+        display: flex;
+        gap: var(--spacer-3);
+        margin-left: -200%;
+    }
+
+    .form-address{
+        width: 100%;
+        display: flex;
+        gap: var(--spacer-3);
+        margin-left: -100%;
+    
+    }
+    
+    .form-address2{
+        width: 100%;
+        display: flex;
+        gap: var(--spacer-3);
+        margin-left: -200%;
+    
+    }
+    
+    
+    .respsoluce{
+       width: 1000%;
+    }
+}

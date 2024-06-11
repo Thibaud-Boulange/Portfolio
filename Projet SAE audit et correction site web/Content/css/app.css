@@ -1,0 +1,370 @@
+* {
+    outline: none;
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    width: 100vw;
+    min-height: 100vh;
+    color: #555;
+    font-family: 'Montserrat', Regular, Arial, Helvetica, sans-serif;
+    background: #c0d4f3;/*radial-gradient(circle, #e6f2ff, #78ace7);*/
+    font-size: var(--font-size--small);
+    font-weight: lighter;
+    overflow-x: hidden;
+}
+
+::-webkit-scrollbar {
+            width: 12px; 
+}
+
+::-webkit-scrollbar-track {
+            background: #304053; 
+}
+
+::-webkit-scrollbar-thumb {
+            background: #ffffff; 
+            border-radius: 6px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+            background: #dfe9ff; 
+}
+
+        
+
+img {
+    width: var(--icon-height-small);
+}
+
+.main-contrainer{
+    width: 100%;
+    min-height: 60vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    gap: var(--spacer-10);
+    margin-bottom: 5%;
+}
+
+.dashboard__table {
+    box-shadow: var(--shadow-regular);
+    width: 100%;
+    border-radius: var(--border-3);
+    background-color: #FFF;
+    box-sizing: border-box;
+    padding: var(--spacer-3);
+    overflow-x: auto; /* Ajout du défilement horizontal */
+    overflow-y: auto; /* Défilement vertical */
+    max-height: 50vh;
+}
+
+/* Masquer la barre de défilement verticale */
+.dashboard__table::-webkit-scrollbar {
+    width: 0;  /* largeur de la barre de défilement verticale */
+    height: 0;  /* hauteur de la barre de défilement horizontale */
+    background: transparent;  /* couleur de fond de la barre de défilement */
+}
+
+/* Optionnel : masquer la barre de défilement dans Firefox */
+.dashboard__table {
+    scrollbar-width: none;  /* pour Firefox */
+    -ms-overflow-style: none;  /* pour Internet Explorer et Edge */
+}
+
+
+.dashboard-container {
+    width: 80%;
+}
+
+th {
+    font-weight: bold;
+}
+
+h1 {
+    font-weight: bold;
+    color: #1c4c9b;
+    font-size: var(--font-size--huge);
+    margin-bottom: var(--spacer-7);
+    font-family: 'Montserrat',sans-serif;
+   
+}
+
+h4 {
+    color: white;
+}
+
+a{
+    text-decoration: none;
+    color: black;
+}
+
+table {
+    margin: auto;
+    width: 95%;
+    height: 100%;
+    border-collapse: collapse;
+    table-layout: fixed;
+}
+
+tbody:before {
+    content:"@";
+    display:block;
+    line-height:var(--spacer-5);
+    text-indent:-99999px;
+}
+
+thead{
+    border-bottom: var(--border-icon);
+    height: var(--height-thead);
+}
+
+textarea{
+    width: 100%;
+    height: var(--height-textarea);
+    border-radius: var(--border-2);
+    padding: var(--spacer-4);
+    box-sizing: border-box;
+    background-color: #FFF;
+    font-size: var(--font-size--normal);
+    border: none;
+    box-shadow: var(--shadow-regular);
+}
+
+form{
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacer-5);
+}
+
+input{
+    width: 100%;
+    border: none;
+    border-radius: var(--border-2);
+    outline: none;
+    transition: .4s;
+    height: var(--height-input);
+    text-indent: var(--spacer-4);
+    background-color: #FFF;
+    box-shadow: var(--shadow-regular);
+    font-size: var(--font-size--little);
+    color: #757575 ;
+}
+
+.inputdate{
+    width: 50%;
+    margin-left: 30%;
+}
+.composantecase{
+    border: none;
+    width: 300px; /* Ajustez la largeur selon vos besoins */
+    padding: 15px; /* Ajustez les marges intérieures si nécessaire */
+
+}
+.center{
+margin-left: 25%;
+}
+select{
+    border: none;
+    border-radius: var(--border-2);
+    color: #757575 ;
+    box-shadow: var(--shadow-regular);
+    font-size: var(--font-size--little);
+}
+
+label {
+    position: absolute;
+    left: 20px;
+    color: #a0a0a0;
+    height: 15px;
+    padding-left: 5px;
+    padding-right: 5px;
+    transition: .2s;
+    font-family: Regular, Arial, Helvetica, sans-serif;
+    font-size: 12px;
+}
+
+button{
+    transition: background-color 0.3s ease;
+    padding: var(--spacer-2) var(--spacer-5); /* Ajustez la taille du bouton ici */
+    background-color: #4F74B1;
+    height: var(--height-button);
+    color: #fff;
+    border-radius: 10px; /* Augmentation du rayon pour un look plus arrondi */
+    text-align: center;
+    font-size: 16px; /* Ajustez la taille de la police ici */
+    font-weight: 600;
+    border: none;
+    cursor: pointer;
+    outline: none;
+    box-shadow: var(--shadow-regular);
+    
+}
+
+/* Style du bouton au survol */
+button:hover {
+    background: var(--tertiary-color);
+    color: var(--primary-color);
+}
+
+.fa {
+    font-size: var(--icon-height-small);
+}
+
+.fa-eye, .fa-download{
+    color: black;
+}
+
+.fa-user-circle{
+    color: white;
+}
+
+/* Style du bouton au survol */
+.button-secondary{
+    background-color: #FFF;
+    border: var(--border-button);
+    color: var(--primary-color);
+}
+
+.button-primary{
+    background-color: var(--primary-color);
+}
+.button-ajout {
+    background-color: var(--primary-color);
+    width: 10%;
+    margin: 0 auto; /* Centre le bouton horizontalement */
+    display: block; /* Nécessaire pour que margin auto fonctionne */
+    margin-top: 5%;
+}
+
+.button-delete{
+    background-color: var(--delete-color);
+    border: var(--border-button-delete);
+}
+
+.button-primary:hover {
+    background: var(--tertiary-color);
+    color: var(--primary-color);
+    outline: 2px solid transparent; /* Ajoute une bordure transparente de 2px autour du bouton */
+}
+/* Style du bouton au survol */
+
+
+/* Lorsque le bouton a le focus (par exemple, lorsqu'il est survolé) */
+button:focus {
+    outline: 2px solid transparent; /* Ajoute une bordure transparente de 2px autour du bouton */
+}
+.button-secondary:hover{
+    background: var(--secondary-color);
+    color: white;
+}
+
+.button-delete:hover{
+    background: var(--secondary-color);
+    color: var(--delete-color);
+}
+
+input::placeholder{
+    font-size: var(--font-size--little);
+}
+
+.textgen{
+    color:#1c4c9b;
+}
+
+.textgentitle{
+    color:#1c4c9b;
+    font-size: 1.5rem;
+}
+.textgentabl{
+    color:#1c4c9b;
+    margin-top: 5%;
+}
+
+.liste-prestataire-container{
+margin-bottom: 6.65%;
+}
+.nomcategorie{
+    margin-left: 25% ;
+    margin-top: 5%;
+    color:#1c4c9b;
+}
+.missionnom{
+    color:#1c4c9b;
+}
+.tableauxinterne{
+    color:#000000;
+    margin: 5% 0% 5% 0%;
+    
+}
+.gradient-separator {
+    height: 3px;
+    background: #ccc; /* Dégradé de couleur */
+    width: 99%; /* Largeur du séparateur */
+    margin: 5px auto; /* Espace autour et centré */
+    border: none; /* Supprimer la bordure */
+}
+.tableauxinterne:hover{
+    color:#1c4c9b;
+    margin: 5% 0% 5% 0%;
+    font-weight: bold;
+}
+
+@media only screen and (max-width: 750px) {
+    .button-ajout {
+
+        width: 50%;
+        margin: 0 auto; /* Centre le bouton horizontalement */
+        display: block; /* Nécessaire pour que margin auto fonctionne */
+        margin-top: 5%;
+    }
+    .nomcategorie{
+        margin-left: 10% ;
+        margin-top: 5%;
+        color:#1c4c9b;
+    }
+
+    .inputdate{
+        width: 500%;
+        margin-right: -200%;
+        margin-left: 0%;
+        }
+
+        .textgentabl{
+            color:#1c4c9b;
+            margin-top: 5%;
+            margin-left: -37%;
+            font-size: 140%;
+        }
+        .resptitre{
+        margin-left: -50%;
+        }
+}
+
+@media only screen and (max-width: 430px) {
+    .button-ajout {
+        width: 50%;
+        margin: 0 auto; /* Centre le bouton horizontalement */
+        display: block; /* Nécessaire pour que margin auto fonctionne */
+        margin-top: 5%;
+    }
+    .nomcategorie{
+        margin-left: 10% ;
+        margin-top: 5%;
+        color:#1c4c9b;
+    }
+    .inputdate{
+        width: 500%;
+        margin-right: -200%;
+        margin-left: 0%;
+        }
+   .textgentabl{
+    color:#1c4c9b;
+    margin-top: 5%;
+    margin-left: -37%;
+    font-size: 140%;
+    }
+
+}

@@ -1,0 +1,59 @@
+<br />
+<font size='1'><table class='xdebug-error xe-warning' dir='ltr' border='1' cellspacing='0' cellpadding='1'>
+<tr><th align='left' bgcolor='#f57900' colspan="5"><span style='background-color: #cc0000; color: #fce94f; font-size: x-large;'>( ! )</span> Warning: Undefined variable $id in /var/www/html/SAES42/Models/Model.php on line <i>166</i></th></tr>
+<tr><th align='left' bgcolor='#e9b96e' colspan='5'>Call Stack</th></tr>
+<tr><th align='center' bgcolor='#eeeeec'>#</th><th align='left' bgcolor='#eeeeec'>Time</th><th align='left' bgcolor='#eeeeec'>Memory</th><th align='left' bgcolor='#eeeeec'>Function</th><th align='left' bgcolor='#eeeeec'>Location</th></tr>
+<tr><td bgcolor='#eeeeec' align='center'>1</td><td bgcolor='#eeeeec' align='center'>0.0000</td><td bgcolor='#eeeeec' align='right'>363608</td><td bgcolor='#eeeeec'>{main}(  )</td><td title='/var/www/html/SAES42/index.php' bgcolor='#eeeeec'>.../index.php<b>:</b>0</td></tr>
+<tr><td bgcolor='#eeeeec' align='center'>2</td><td bgcolor='#eeeeec' align='center'>0.0001</td><td bgcolor='#eeeeec' align='right'>365200</td><td bgcolor='#eeeeec'>Controller->__construct(  )</td><td title='/var/www/html/SAES42/index.php' bgcolor='#eeeeec'>.../index.php<b>:</b>41</td></tr>
+<tr><td bgcolor='#eeeeec' align='center'>3</td><td bgcolor='#eeeeec' align='center'>0.0001</td><td bgcolor='#eeeeec' align='right'>365248</td><td bgcolor='#eeeeec'>Controller_administrateur->action_getInfosPersonne(  )</td><td title='/var/www/html/SAES42/Controllers/Controller.php' bgcolor='#eeeeec'>.../Controller.php<b>:</b>15</td></tr>
+<tr><td bgcolor='#eeeeec' align='center'>4</td><td bgcolor='#eeeeec' align='center'>0.0127</td><td bgcolor='#eeeeec' align='right'>366168</td><td bgcolor='#eeeeec'>Model->getInfosPersonneByEmail( <span>$mail = </span><span>&#39;jean@example.com&#39;</span> )</td><td title='/var/www/html/SAES42/Controllers/Controller_administrateur.php' bgcolor='#eeeeec'>.../Controller_administrateur.php<b>:</b>605</td></tr>
+<tr><th align='left' colspan='5' bgcolor='#e9b96e'>Variables in local scope (#4)</th></tr>
+<tr><td colspan='2' align='right' bgcolor='#eeeeec' valign='top'><pre>$id&nbsp;=</pre></td><td colspan='3' bgcolor='#eeeeec' valign='top'><i>Undefined</i></td></tr>
+<tr><td colspan='2' align='right' bgcolor='#eeeeec' valign='top'><pre>$liste&nbsp;=</pre></td><td colspan='3' bgcolor='#eeeeec'><pre class='xdebug-var-dump' dir='ltr'>
+<small>/var/www/html/SAES42/Models/Model.php:166:</small>
+<b>array</b> <i>(size=8)</i>
+  'id_personne' <font color='#888a85'>=&gt;</font> <small>int</small> <font color='#4e9a06'>1</font>
+  0 <font color='#888a85'>=&gt;</font> <small>int</small> <font color='#4e9a06'>1</font>
+  'nom' <font color='#888a85'>=&gt;</font> <small>string</small> <font color='#cc0000'>'Dupont'</font> <i>(length=6)</i>
+  1 <font color='#888a85'>=&gt;</font> <small>string</small> <font color='#cc0000'>'Dupont'</font> <i>(length=6)</i>
+  'prenom' <font color='#888a85'>=&gt;</font> <small>string</small> <font color='#cc0000'>'Jean'</font> <i>(length=4)</i>
+  2 <font color='#888a85'>=&gt;</font> <small>string</small> <font color='#cc0000'>'Jean'</font> <i>(length=4)</i>
+  'email' <font color='#888a85'>=&gt;</font> <small>string</small> <font color='#cc0000'>'jean@example.com'</font> <i>(length=16)</i>
+  3 <font color='#888a85'>=&gt;</font> <small>string</small> <font color='#cc0000'>'jean@example.com'</font> <i>(length=16)</i>
+</pre></td></tr>
+<tr><td colspan='2' align='right' bgcolor='#eeeeec' valign='top'><pre>$mail&nbsp;=</pre></td><td colspan='3' bgcolor='#eeeeec'><pre class='xdebug-var-dump' dir='ltr'>
+<small>/var/www/html/SAES42/Models/Model.php:166:</small><small>string</small> <font color='#cc0000'>'jean@example.com'</font> <i>(length=16)</i>
+</pre></td></tr>
+<tr><td colspan='2' align='right' bgcolor='#eeeeec' valign='top'><pre>$req&nbsp;=</pre></td><td colspan='3' bgcolor='#eeeeec'><pre class='xdebug-var-dump' dir='ltr'>
+<small>/var/www/html/SAES42/Models/Model.php:166:</small>
+<b>object</b>(<i>PDOStatement</i>)[<i>4</i>]
+  <i>public</i> <i>string</i> 'queryString' <font color='#888a85'>=&gt;</font> <small>string</small> <font color='#cc0000'>'SELECT id_personne, nom, prenom, email FROM PERSONNE WHERE email = :mail'</font> <i>(length=72)</i>
+</pre></td></tr>
+</table></font>
+<br />
+<font size='1'><table class='xdebug-error xe-uncaught-exception' dir='ltr' border='1' cellspacing='0' cellpadding='1'>
+<tr><th align='left' bgcolor='#f57900' colspan="5"><span style='background-color: #cc0000; color: #fce94f; font-size: x-large;'>( ! )</span> Fatal error: Uncaught PDOException: SQLSTATE[42601]: Syntax error: 7 ERROR:  syntax error at or near ")"
+LINE 5:         )
+                ^ in /var/www/html/SAES42/Models/Model.php on line <i>348</i></th></tr>
+<tr><th align='left' bgcolor='#f57900' colspan="5"><span style='background-color: #cc0000; color: #fce94f; font-size: x-large;'>( ! )</span> PDOException: SQLSTATE[42601]: Syntax error: 7 ERROR:  syntax error at or near ")"
+LINE 5:         )
+                ^ in /var/www/html/SAES42/Models/Model.php on line <i>348</i></th></tr>
+<tr><th align='left' bgcolor='#e9b96e' colspan='5'>Call Stack</th></tr>
+<tr><th align='center' bgcolor='#eeeeec'>#</th><th align='left' bgcolor='#eeeeec'>Time</th><th align='left' bgcolor='#eeeeec'>Memory</th><th align='left' bgcolor='#eeeeec'>Function</th><th align='left' bgcolor='#eeeeec'>Location</th></tr>
+<tr><td bgcolor='#eeeeec' align='center'>1</td><td bgcolor='#eeeeec' align='center'>0.0000</td><td bgcolor='#eeeeec' align='right'>363608</td><td bgcolor='#eeeeec'>{main}(  )</td><td title='/var/www/html/SAES42/index.php' bgcolor='#eeeeec'>.../index.php<b>:</b>0</td></tr>
+<tr><td bgcolor='#eeeeec' align='center'>2</td><td bgcolor='#eeeeec' align='center'>0.0001</td><td bgcolor='#eeeeec' align='right'>365200</td><td bgcolor='#eeeeec'>Controller->__construct(  )</td><td title='/var/www/html/SAES42/index.php' bgcolor='#eeeeec'>.../index.php<b>:</b>41</td></tr>
+<tr><td bgcolor='#eeeeec' align='center'>3</td><td bgcolor='#eeeeec' align='center'>0.0001</td><td bgcolor='#eeeeec' align='right'>365248</td><td bgcolor='#eeeeec'>Controller_administrateur->action_getInfosPersonne(  )</td><td title='/var/www/html/SAES42/Controllers/Controller.php' bgcolor='#eeeeec'>.../Controller.php<b>:</b>15</td></tr>
+<tr><td bgcolor='#eeeeec' align='center'>4</td><td bgcolor='#eeeeec' align='center'>0.0127</td><td bgcolor='#eeeeec' align='right'>366168</td><td bgcolor='#eeeeec'>Model->getInfosPersonneByEmail( <span>$mail = </span><span>&#39;jean@example.com&#39;</span> )</td><td title='/var/www/html/SAES42/Controllers/Controller_administrateur.php' bgcolor='#eeeeec'>.../Controller_administrateur.php<b>:</b>605</td></tr>
+<tr><td bgcolor='#eeeeec' align='center'>5</td><td bgcolor='#eeeeec' align='center'>0.0232</td><td bgcolor='#eeeeec' align='right'>369896</td><td bgcolor='#eeeeec'>Model->getRole( <span>$id = </span><span>NULL</span> )</td><td title='/var/www/html/SAES42/Models/Model.php' bgcolor='#eeeeec'>.../Model.php<b>:</b>166</td></tr>
+<tr><td bgcolor='#eeeeec' align='center'>6</td><td bgcolor='#eeeeec' align='center'>0.0232</td><td bgcolor='#eeeeec' align='right'>369896</td><td bgcolor='#eeeeec'>Model->isGestionnaire( <span>$id = </span><span>NULL</span> )</td><td title='/var/www/html/SAES42/Models/Model.php' bgcolor='#eeeeec'>.../Model.php<b>:</b>294</td></tr>
+<tr><td bgcolor='#eeeeec' align='center'>7</td><td bgcolor='#eeeeec' align='center'>0.0232</td><td bgcolor='#eeeeec' align='right'>370792</td><td bgcolor='#eeeeec'><a href='http://www.php.net/PDOStatement.execute' target='_new'>execute</a>(  )</td><td title='/var/www/html/SAES42/Models/Model.php' bgcolor='#eeeeec'>.../Model.php<b>:</b>348</td></tr>
+<tr><th align='left' colspan='5' bgcolor='#e9b96e'>Variables in local scope (#6)</th></tr>
+<tr><td colspan='2' align='right' bgcolor='#eeeeec' valign='top'><pre>$id&nbsp;=</pre></td><td colspan='3' bgcolor='#eeeeec'><pre class='xdebug-var-dump' dir='ltr'>
+<small>/var/www/html/SAES42/Models/Model.php:348:</small><font color='#3465a4'>null</font>
+</pre></td></tr>
+<tr><td colspan='2' align='right' bgcolor='#eeeeec' valign='top'><pre>$query&nbsp;=</pre></td><td colspan='3' bgcolor='#eeeeec'><pre class='xdebug-var-dump' dir='ltr'>
+<small>/var/www/html/SAES42/Models/Model.php:348:</small>
+<b>object</b>(<i>PDOStatement</i>)[<i>5</i>]
+  <i>public</i> <i>string</i> 'queryString' <font color='#888a85'>=&gt;</font> <small>string</small> <font color='#cc0000'>' SELECT EXISTS (&#10;            SELECT *&#10;            FROM gestionnaire&#10;            WHERE id_personne =  &#10;        )'</font> <i>(length=111)</i>
+</pre></td></tr>
+</table></font>

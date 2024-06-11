@@ -1,0 +1,146 @@
+.composante-container{  
+    min-height: 60vh;
+    width: 45%;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacer-8);
+    margin-bottom: 5%;
+}
+
+.infos-container{
+    height: 100%;
+    width: 175%;
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    gap: var(--spacer-5);
+    background-color: rgb(255, 255, 255);
+    border-radius: var(--border-3);
+    margin-left: -37%;
+
+    
+}
+.infos-container2{
+    height: 100%;
+    width: 75%;
+    display: flex;
+    margin-left: 15%;
+    flex-wrap: wrap;
+    gap: var(--spacer-5);
+    background-color: rgb(255, 255, 255);
+    border-radius: var(--border-3);
+    margin-bottom: 10%;
+
+    
+}
+
+.infos__colonne{
+    flex-direction: column;
+    gap: var(--spacer-3);
+    max-height: 750px; /* Définissez une hauteur maximale pour les colonnes */
+    overflow-y: auto; /* Activez le défilement vertical si nécessaire */
+    position: relative; /* Pour positionner la flèche */
+    
+    
+}
+.bordered::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 1px; /* Décale le trait de 10px vers la gauche */
+    width: 4px;
+    background-color: #ccc; /* Changez la couleur selon vos besoins */
+}
+
+.infos__colonne:first-child::before {
+    display: none; /* Enlève le trait pour la première colonne */
+}
+.infos-container{
+    text-align: center;
+
+    
+}
+
+.infos-composante{
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacer-3);
+}
+
+.infos-composante{
+    color: rgb(255, 255, 255);
+   
+}
+
+.infos-container .ajout{
+    text-decoration: none;
+    color: #1c4c9b;
+    border-bottom: 1px solid rgb(61, 61, 61);
+    padding-bottom: var(--spacer-1);
+    
+}
+.infos-container .ajout:hover{
+    text-decoration: none;
+}
+.infos-container:hover h3 {
+    text-decoration: none;
+    border-bottom: none;
+}
+.infos-container .fa{
+    font-size: var(--height-icon-small);
+}
+
+@media only screen and (max-width: 750px) {
+    .infos-container2{
+        width: 100%;
+        margin-left: 0%;
+   
+    }
+
+    .infos-composante {
+        width: 100%;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .bordered::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: 1px; /* Décale le trait de 10px vers la gauche */
+        width: 2px;
+        background-color: #ccc; /* Changez la couleur selon vos besoins */
+    }
+
+
+
+}
+
+
+
+
+@media only screen and (max-width: 430px) {
+
+    .infos-container2{
+        width: 100%;
+        margin-left: 0%;
+    }
+    .infos-composante {
+        width: 100%; /* ou toute autre valeur inférieure à 75% selon vos besoins */
+        justify-content: center;
+        align-items: center;
+    }
+
+    .bordered::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: 1px; /* Décale le trait de 10px vers la gauche */
+        width: 0px;
+        background-color: #ccc; /* Changez la couleur selon vos besoins */
+    }
+}

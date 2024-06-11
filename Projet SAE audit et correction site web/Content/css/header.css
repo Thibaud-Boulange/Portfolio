@@ -1,0 +1,189 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Judson&family=Montserrat&display=swap');
+
+header {
+    background: var(--primary-color);
+    min-height: 10vh;
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    color: white;
+    margin-bottom: 10vh;
+}
+
+.header-navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 90%;
+    margin: 0 auto;
+    overflow: hidden;
+    gap: var(--spacer-4);
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.menu-list {
+    gap: var(--spacer-8);
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: var(--spacer-5);
+}
+
+.header-navbar {
+    font-size: var(--font-size--small);
+    font-family: 'Montserrat', sans-serif;
+}
+
+a:hover {
+    border-bottom: 1px solid white;
+    padding-bottom: var(--spacer-1);
+}
+
+.logo {
+    font-size: var(--font-size--huge);
+    font-weight: lighter;
+    font-family: 'Judson', regular;
+    text-shadow: var(--shadow-text);
+}
+
+.right-elt {
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    margin-top: 7%;
+    white-space: nowrap; /* Assurez-vous que le texte ne se divise pas en plusieurs lignes */
+}
+
+/* Style des liens dans la barre de navigation */
+nav ul li a {
+    text-decoration: none;
+    color: #fff;
+    font-weight: lighter;
+    transition: border-bottom 0.3s ease; /* Ajoute une transition pour la bordure */
+    border-bottom: 1px solid transparent; /* Ajoute une bordure transparente */
+    padding-bottom: var(--spacer-1);
+}
+
+/* Style des liens au survol */
+nav ul li a:hover {
+    font-weight: lighter; /* Garde le poids de la police léger au survol */
+    border-bottom: 1px solid white; /* Ajoute une bordure blanche au survol */
+}
+
+/* Styles pour le menu burger */
+.burger-menu {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+}
+
+.burger-menu span {
+    height: 3px;
+    width: 25px;
+    background: white;
+    margin: 4px;
+    transition: all 0.3s;
+}
+
+/* Styles pour le menu mobile */
+@media (max-width: 768px) {
+    .menu-list {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+        text-align: center;
+        background-color: var(--primary-color);
+    }
+
+    .menu-list.active {
+        display: flex;
+    }
+
+    .burger-menu {
+        display: flex;
+    }
+
+    .burger-menu.active span:nth-child(1) {
+        transform: rotate(45deg) translate(10px, 5px);
+    }
+
+    .burger-menu.active span:nth-child(2) {
+        opacity: 0;
+    }
+
+    .burger-menu.active span:nth-child(3) {
+        transform: rotate(-45deg) translate(10px, -5px);
+    }
+
+    .header-navbar {
+        flex-direction: column;
+    }
+
+    nav ul {
+        
+        width: 100%;
+    }
+
+    nav ul li {
+        width: 100%;
+    }
+
+    header {
+        width: 100%;
+    }
+}
+
+@media only screen and (max-width: 430px) {
+    .menu-list {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+        text-align: center;
+        background-color: var(--primary-color);
+    }
+
+    .menu-list.active {
+        display: flex;
+    }
+
+    .burger-menu {
+        display: flex;
+    }
+
+    .burger-menu.active span:nth-child(1) {
+        transform: rotate(45deg) translate(10px, 5px);
+    }
+
+    .burger-menu.active span:nth-child(2) {
+        opacity: 0;
+    }
+
+    .burger-menu.active span:nth-child(3) {
+        transform: rotate(-45deg) translate(10px, -5px);
+    }
+
+    .header-navbar {
+        flex-direction: column;
+    }
+
+    nav ul {
+        flex-direction: column;
+        width: 100%;
+    }
+
+    nav ul li {
+        width: 100%;
+    }
+
+    header {
+        width: 100%;
+    }
+    header {
+        width: 100%; /* ou toute autre valeur inférieure à 75% selon vos besoins */
+    }
+}
